@@ -1,0 +1,53 @@
+<style>
+.center {
+width:400px;
+height:150px;
+margin-left:auto;
+margin-right:auto; 
+background: #bfd255;
+background: -moz-linear-gradient(top,  #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%); 
+background: -webkit-linear-gradient(top,  #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); 
+background: linear-gradient(to bottom,  #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); 
+overflow:hidden; border-radius:10px; position:relative;
+}
+
+.slide{
+width: 100px;
+height:250px;
+transform: skew(-50deg);
+background: rgba(255,255,255,0.6); /
+background: -moz-linear-gradient(top,  #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%);
+background: -webkit-linear-gradient(top,  #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%);
+background: linear-gradient(to bottom,  #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%);
+position: relative;
+left:-250px;
+animation-name:test;
+animation-duration: .8s;
+animation-timing-function: ease;
+animation-iteration-count: 1;
+display:none;
+}
+
+.text {
+width:180px;
+height:40px;
+margin:0;
+text-align:center;
+position:absolute; 
+left:calc(50% - 90px); 
+right:calc(50% - 90px);
+top:calc(50% - 20px);}
+
+@keyframes test {
+  from {left: -250px;}
+  to {left: 500px;}
+}
+.center:hover .slide{display:block;}
+</style>
+
+
+
+<div class="center">
+	<h1 class="text">Hover me!</h1>
+	<div class="slide"></div>
+</div>
